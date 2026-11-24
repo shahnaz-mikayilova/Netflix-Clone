@@ -1,17 +1,19 @@
 # Xcode
-# Build artifacts
 build/
 DerivedData/
+*.xcuserstate
+*.xcuserdata/
+*.xccheckout
+*.moved-aside
+*.hmap
 
-# Personal settings
-xcuserdata/
-
-# Architecture caches
+# Workspace
 .xcworkspace/xcuserdata/
 
-# Pods
+# CocoaPods
 Pods/
-.bundle/
 
-# Mac OS X
+# macOS
 .DS_Store
+**/.DS_Store
+

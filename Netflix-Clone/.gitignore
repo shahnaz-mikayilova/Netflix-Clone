@@ -1,0 +1,17 @@
+# Xcode
+# Build artifacts
+build/
+DerivedData/
+
+# Personal settings
+xcuserdata/
+
+# Architecture caches
+.xcworkspace/xcuserdata/
+
+# Pods
+Pods/
+.bundle/
+
+# Mac OS X
+.DS_Store

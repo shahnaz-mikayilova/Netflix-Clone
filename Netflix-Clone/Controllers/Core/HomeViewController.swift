@@ -9,7 +9,7 @@ import UIKit
 
 enum Sections: Int {
     case TrendingMovies = 0
-    case TrendingTv = 1
+    case TrendingTV = 1
     case Popular = 2
     case Upcoming = 3
     case TopRated = 4
@@ -156,10 +156,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                     cell.configure(with: titles)
                 }
             }
-        case Sections.TrendingTv.rawValue:
-            APICaller.shared.getTrendingMovies { result in
+        case Sections.TrendingTV.rawValue:
+            APICaller.shared.getTrendingTvs { result in
                 if case .success(let titles) = result {
-                    cell.configure(with: titles)
+                    DispatchQueue.main.async {
+                        cell.configure(with: titles)
+                    }
                 }
             }
         case Sections.Popular.rawValue:
